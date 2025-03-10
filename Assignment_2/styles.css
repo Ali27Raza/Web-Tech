@@ -1,0 +1,86 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+}
+
+.header{
+
+    background-color: white; font-family: Arial  ;  ; 
+}
+
+.navbar{
+
+display: flex; align-items: center; justify-content: space-between;
+flex-direction: column;
+gap: 20px;
+
+
+}
+
+.logo{
+
+    margin-top: 50px;
+    margin-left: 50px;
+    
+
+
+
+
+}
+
+li{
+
+list-style: none;
+display: inline-block;
+padding: 10px;
+
+}
+
+li a{
+
+color: black; font-size: 15px; font-weight: bold; margin-right: 25px; 
+
+}
+
+
+.landing-pic{
+
+    position: relative;
+
+margin-top: 40px;
+margin-left: 40px;
+
+}
+
+.button{
+
+position: absolute;
+
+bottom: 20%;
+left: 50%;
+
+background-color: aquamarine;
+color: white;
+
+padding: 10px 20px;
+
+
+
+
+
+}
+
+.products{
+
+    display: flex;
+    gap: 20px;
+padding: 0 40px;
+
+margin-top: 50px;
+
+
+}
+
