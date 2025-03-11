@@ -62,7 +62,7 @@ position: absolute;
 bottom: 20%;
 left: 50%;
 
-background-color: aquamarine;
+background-color: darkgreen;
 color: white;
 
 padding: 10px 20px;
@@ -81,6 +81,145 @@ padding: 0 40px;
 
 margin-top: 50px;
 
+margin-bottom: 50px;
+
 
 }
 
+.pic-text{
+
+    display: flex;
+
+    margin-bottom: 30px;
+
+    padding-left: 40px;
+
+    
+}
+
+.text{
+
+background-color: rgb(253, 251, 249);
+
+}
+
+.heading{
+
+    font-size: xx-large;
+    margin: 30px 30px;
+}
+
+.pic-text-paragraph{
+
+font-size: larger;
+
+
+margin: 30px 30px;
+
+}
+
+
+.pic-text-button{
+
+    margin: 30px 30px;
+padding: 10px 20px;
+
+background-color: darkgreen;
+
+
+}
+
+.best-seller{
+
+display: flex;
+
+gap: 20px;
+
+margin-left: 40px;
+
+}
+
+h2{
+
+    margin-left: 40px;
+
+    margin-bottom: 40px;
+}
+
+h3{
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+
+.color-tag{
+
+    border-radius: 100px;
+
+
+}
+
+
+.big-pic-section{
+
+
+    margin-left: 40px;
+margin-top: 40px;
+
+
+
+}
+
+
+.small-pics{
+
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.wax-blog{
+
+    margin-top: 40px;
+
+    display: flex;
+
+    margin-bottom: 30px;
+
+    padding-left: 40px;
+
+
+    background-color: rgb(253, 252, 251);
+
+    
+}
+
+.wax-heading{
+
+    margin-top: 70px;
+
+margin-left: 30px;
+
+font-size: xx-large;
+
+
+
+}
+
+
+.explore{
+
+    display: flex;
+    gap: 20px;
+padding: 0 40px;
+
+margin-top: 50px;
+
+margin-bottom: 50px;
+
+
+}
