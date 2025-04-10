@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbour</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar-nav .nav-link {
+        color: black;
+        font-weight: bold;
+        margin-right: 25px;
+      }
+
+      .shop-now-btn {
+        background-color: darkgreen;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+      }
+
+      .hero-section {
+        position: relative;
+      }
+
+      .hero-button {
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .feature-heading {
+        margin-bottom: 40px;
+      }
+
+      .color-tag {
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      .lunar-new-year {
+        background-color: rgb(253, 251, 249);
+      }
+
+      .big-pic-section {
+        position: relative;
+        margin-bottom: 450px;
+      }
+
+      .big-pic-text {
+        position: absolute;
+        top: 20%;
+        color: white;
+        width: 30%;
+        padding-left: 30px;
+      }
+
+      .small-pics-container {
+        position: absolute;
+        bottom: -80%;
+        left: 0;
+        right: 0;
+      }
+
+      .wax-for-life {
+        background-color: rgb(253, 251, 249);
+      }
+
+      footer {
+        background-color: #24262b;
+        padding: 70px 0;
+        color: #bbbbbb;
+      }
+
+      footer h4 {
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+      }
+
+      footer h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        width: 50px;
+      }
+
+      footer ul li {
+        margin-bottom: 10px;
+      }
+
+      footer a {
+        color: #bbbbbb;
+        text-decoration: none;
+        font-weight: 300;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 10px 10px 0;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+      }
+
+      .social-links a:hover {
+        color: #24262b;
+        background-color: #ffffff;
+      }
+
+      .footer-img {
+        margin-right: 20px;
+        margin-top: 15px;
+        max-width: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="bg-white py-3">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid flex-column">
+            <a class="navbar-brand mx-auto mb-3" href="#">
+              <img
+                src="https://www.barbour.com/static/version1740559557/frontend/Barbour/default/en_GB/images/brand1.svg"
+                alt="Barbour"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New In</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Accessories</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Dogs</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Barbour International</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Discover</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-section container mb-5">
+      <div class="position-relative">
+        <img
+          src="https://www.barbour.com/media//AW22_EXPLORER_DESKTOP_ROW.jpg"
+          alt=""
+          class="img-fluid w-100"
+        />
+        <button class="btn shop-now-btn hero-button">Shop Now</button>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <a href="#">
+            <img
+              src="https://www.barbour.com/media/MENS_JACKETS.png"
+              alt=""
+              class="img-fluid"
+            />
+          </a>
+          <h2 class="h4 mt-3">Men's Jackets</h2>
+          <a href="#" class="text-dark fw-bold">SHOP NOW</a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#">
+            <img
+              src="https://www.barbour.com/media/WOMENS_JACKET_DROP_ONE.png"
+              alt=""
+              class="img-fluid"
+            />
+          </a>
+          <h2 class="h4 mt-3">Women's Jackets</h2>
+          <a href="#" class="text-dark fw-bold">SHOP NOW</a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#">
+            <img
+              src="https://www.barbour.com/media/WOMENS_ACCESSORIES_1.png"
+              alt=""
+              class="img-fluid"
+            />
+          </a>
+          <h2 class="h4 mt-3">Accessories</h2>
+          <a href="#" class="text-dark fw-bold">SHOP NOW</a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#">
+            <img
+              src="https://www.barbour.com/media//SS25_FOOTWEAR.png"
+              alt=""
+              class="img-fluid"
+            />
+          </a>
+          <h2 class="h4 mt-3">Footwear</h2>
+          <a href="#" class="text-dark fw-bold">SHOP NOW</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img
+            src="https://www.barbour.com/media//BARBOUR_TERTIARY_CNY_1.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div
+          class="col-md-6 lunar-new-year d-flex flex-column justify-content-center p-4"
+        >
+          <h2 class="h2 mb-4">Lunar New Year</h2>
+          <p class="fs-5 mb-4">
+            As we welcome in the Year of the Snake, Barbour has released a
+            capsule collection to celebrate the upcoming Lunar New Year.
+            Discover must-have pieces inspired by Chinese tradition and
+            festivities to take you through the year ahead. Featuring the
+            statement colour red to symbolise success and good fortune, as well
+            as our classic Barbour tartan, which draws inspiration from our rich
+            country heritage.
+          </p>
+          <button class="btn shop-now-btn align-self-start">
+            SHOP THE COLLECTION
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <h2 class="feature-heading">Best Sellers</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <img
+            src="https://www.barbour.com/media/catalog/product/cache/235f827b90988ab66ff1cc15c76794f0/M/W/MWX0010OL71_SS21CARRYFORWARD_front_model.jpg"
+            alt=""
+            class="img-fluid"
+          />
+          <h3 class="h5 mt-3">Classic Bedale</h3>
+          <div>
+            <img
+              class="color-tag"
+              src="https://www.barbour.com/media/catalog/product/cache/202dfe5190c1c47d8d8e0d6e12839a01/L/R/LRF0066OL11_CARRYFORWARD_swatch_1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <img
+            src="https://www.barbour.com/media/catalog/product/cache/235f827b90988ab66ff1cc15c76794f0/L/W/LWX0668OL71_AW23MAIN_front.jpg"
+            alt=""
+            class="img-fluid"
+          />
+          <h3 class="h5 mt-3">Classic Beadnell</h3>
+          <div>
+            <img
+              class="color-tag"
+              src="https://www.barbour.com/media/catalog/product/cache/202dfe5190c1c47d8d8e0d6e12839a01/L/R/LRF0066OL11_CARRYFORWARD_swatch_1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <img
+            src="https://www.barbour.com/media/catalog/product/cache/235f827b90988ab66ff1cc15c76794f0/M/W/MWX0010OL71_SS21CARRYFORWARD_front_model.jpg"
+            alt=""
+            class="img-fluid"
+          />
+          <h3 class="h5 mt-3">Ashby Wax Jacket</h3>
+          <div>
+            <img
+              class="color-tag"
+              src="https://www.barbour.com/media/catalog/product/cache/202dfe5190c1c47d8d8e0d6e12839a01/L/R/LRF0066NY72_SS25_swatch_1.jpg"
+              alt=""
+            />
+            <img
+              class="color-tag"
+              src="https://www.barbour.com/media/catalog/product/cache/202dfe5190c1c47d8d8e0d6e12839a01/L/R/LRF0066OL11_CARRYFORWARD_swatch_1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <img
+            src="https://www.barbour.com/media/catalog/product/cache/235f827b90988ab66ff1cc15c76794f0/M/W/MWX0010OL71_SS21CARRYFORWARD_front_model.jpg"
+            alt=""
+            class="img-fluid"
+          />
+          <h3 class="h5 mt-3">Wilton Welington's</h3>
+          <div>
+            <img
+              class="color-tag"
+              src="https://www.barbour.com/media/catalog/product/cache/202dfe5190c1c47d8d8e0d6e12839a01/L/R/LRF0066NY11_SS23_swatch_1.jpg"
+              alt=""
+            />
+            <img
+              class="color-tag"
+              src="https://www.barbour.com/media/catalog/product/cache/202dfe5190c1c47d8d8e0d6e12839a01/L/R/LRF0066GN22_SS25_swatch_1.jpg"
+              alt=""
+            />
+            <img
+              class="color-tag"
+              src="https://www.barbour.com/media/catalog/product/cache/202dfe5190c1c47d8d8e0d6e12839a01/L/R/LRF0066NY72_SS25_swatch_1.jpg"
+              alt=""
+            />
+            <img
+              class="color-tag"
+              src="https://www.barbour.com/media/catalog/product/cache/202dfe5190c1c47d8d8e0d6e12839a01/L/R/LRF0066OL11_CARRYFORWARD_swatch_1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <div class="big-pic-section">
+        <div class="position-relative">
+          <img
+            src="https://www.barbour.com/media/wysiwyg/BLOG_BACKDROP_BANNER_AW_3.png"
+            alt=""
+            class="img-fluid w-100"
+          />
+          <div class="big-pic-text">
+            <h2>Barbour Way of Life</h2>
+            <p>
+              Discover more about the Barbour Way of life and get inspired to
+              make the most of life's simple pleasures, and the great outdoors.
+            </p>
+            <button class="btn shop-now-btn">VIEW ALL</button>
+          </div>
+        </div>
+        <div class="small-pics-container">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://www.barbour.com/media/DOG_WALKING_OUTFITS_CAROUSEL_BANNER.jpg"
+                  alt=""
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="h5">Barbour Dog Walking Outfit Ideas</h3>
+                  <a href="#" class="text-dark">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://www.barbour.com/media/FESTIVAL_BLOG_BANNER_CAROUSEL.png"
+                  alt=""
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="h5">Festival Outfit Ideas and Essentials</h3>
+                  <a href="#" class="text-dark">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://www.barbour.com/media/HOW_TO_MEASURE_BLOG_CAROUSEL.png"
+                  alt=""
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="h5">How to Measure a Dog for a Coat</h3>
+                  <a href="#" class="text-dark">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <div class="row g-0">
+        <div
+          class="col-md-6 wax-for-life d-flex flex-column justify-content-center p-4"
+        >
+          <h2 class="h2 mb-4">Wax For Life</h2>
+          <p class="fs-5 mb-4">
+            When you buy a Barbour, you're investing in a companion for life.
+            Something to be passed down the generations, picking up patches and
+            stories as it goes. When it's time for a re-wax, you can use one of
+            our home care kits, or send it to be lovingly restored by out
+            craftspeople in South Shields.
+          </p>
+          <button class="btn shop-now-btn align-self-start">
+            DISCOVER MORE
+          </button>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="https://www.barbour.com/media/wysiwyg/Wax_for_life_desktop.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <h2 class="feature-heading">Explore Barbour International</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <a href="#">
+            <img
+              src="https://www.barbour.com/media/EXPLORE_BI_MENS_AW24.png"
+              alt=""
+              class="img-fluid"
+            />
+          </a>
+          <h2 class="h5 mt-3">B.INTL MENSWEAR</h2>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#">
+            <img
+              src="https://www.barbour.com/media/EXPLORE_BI_WOMENS_AW24.png"
+              alt=""
+              class="img-fluid"
+            />
+          </a>
+          <h2 class="h5 mt-3">B.INTL WOMENSWEAR</h2>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#">
+            <img
+              src="https://www.barbour.com/media/EXPLORE_BI_BYCOLLECTION_AW24.png"
+              alt=""
+              class="img-fluid"
+            />
+          </a>
+          <h2 class="h5 mt-3">BLACK & YELLOW COLLECTION</h2>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#">
+            <img
+              src="https://www.barbour.com/media/EXPLORE_BI_MOTOCOLLECTION_AW24.png"
+              alt=""
+              class="img-fluid"
+            />
+          </a>
+          <h2 class="h5 mt-3">B.INTL MOTO COLLECTION</h2>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <h4>Subscribe</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#"
+                  >Find out first about what's new, deals and promotions.</a
+                >
+              </li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Childrens</a></li>
+              <li><a href="#">Footwear</a></li>
+              <li>
+                <a href="#">I consent to receiving updates from Barbour</a>
+              </li>
+            </ul>
+            <div>
+              <img
+                class="footer-img"
+                src="https://www.barbour.com/static/version1740559557/frontend/Barbour/default/en_GB/images/barb-logo-footer.svg"
+                alt=""
+              />
+              <img
+                class="footer-img"
+                src="https://www.barbour.com/static/version1740559557/frontend/Barbour/default/en_GB/images/barb-int-logo-footer.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <h4>About Us</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Corporate Responsibility</a></li>
+              <li><a href="#">Our Heritage</a></li>
+              <li><a href="#">Counterfeit Education</a></li>
+              <li><a href="#">Press Area</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <h4>Customer Service</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Find a Stockist</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Repair & Re-wax</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
