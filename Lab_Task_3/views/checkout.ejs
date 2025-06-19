@@ -1,0 +1,42 @@
+<div class="checkout-container">
+  <h2>Checkout</h2>
+  <% if (cart && cart.length > 0) { %>
+    <h3>Order Summary</h3>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% cart.forEach(item => { %>
+          <tr>
+            <td><%= item.title %></td>
+            <td><img src="<%= item.image %>" alt="<%= item.title %>"></td>
+            <td>$<%= item.price.toFixed(2) %></td>
+            <td><%= item.qty %></td>
+            <td>$<%= (item.price * item.qty).toFixed(2) %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <h3>Total: $<%= cart.reduce((total, item) => total + item.price * item.qty, 0).toFixed(2) %></h3>
+    <h3>Shipping Details</h3>
+    <form class="checkout-form" action="/cart/order/place" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+      <label for="address">Address</label>
+      <textarea id="address" name="address" required></textarea>
+      <button type="submit">Pay Later with Cash</button>
+    </form>
+  <% } else { %>
+    <p>Your cart is empty.</p>
+    <a href="/products" class="button">Continue Shopping</a>
+  <% } %>
+</div>

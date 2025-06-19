@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicles</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <nav class="navbar">
+      <div class="logo"><img src="/images/logo.png" alt="Logo"></div>
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <h1>Vehicles</h1>
+    <div class="products">
+      <% vehicles.forEach(vehicle => { %>
+        <div class="product-item">
+          <img src="<%= vehicle.image %>" alt="<%= vehicle.name %>">
+          <h3><%= vehicle.name %></h3>
+          <p>Brand: <%= vehicle.brand %></p>
+          <p>Price: $<%= vehicle.price.toFixed(2) %></p>
+          <p>Type: <%= vehicle.type %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

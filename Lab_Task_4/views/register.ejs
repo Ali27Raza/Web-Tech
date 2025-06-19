@@ -1,0 +1,557 @@
+<div class="auth-page">
+  <div class="container">
+    <div class="auth-wrapper">
+      <!-- Register Section -->
+      <div class="auth-section">
+        <h2 class="section-title">CREATE AN ACCOUNT</h2>
+        <p class="section-subtitle">Join us and start your shopping journey</p>
+
+        <form
+          id="registerForm"
+          class="auth-form"
+          method="POST"
+          action="/register"
+          novalidate
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" class="form-label">First name *</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                class="form-input"
+                placeholder="First name"
+                required
+              />
+              <span class="error-message" id="firstNameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName" class="form-label">Last name *</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                class="form-input"
+                placeholder="Last name"
+                required
+              />
+              <span class="error-message" id="lastNameError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mobile" class="form-label">Mobile</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                class="form-input"
+                placeholder="Mobile"
+              />
+              <span class="error-message" id="mobileError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="registerEmail" class="form-label">Email *</label>
+              <input
+                type="email"
+                id="registerEmail"
+                name="email"
+                class="form-input"
+                placeholder="Email"
+                required
+              />
+              <span class="error-message" id="registerEmailError"></span>
+            </div>
+          </div>
+
+          <div class="form-group password-group">
+            <label for="registerPassword" class="form-label">Password *</label>
+            <div class="password-input-wrapper">
+              <input
+                type="password"
+                id="registerPassword"
+                name="password"
+                class="form-input"
+                placeholder="Password"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                id="toggleRegisterPassword"
+              >
+                SHOW
+              </button>
+            </div>
+            <span class="error-message" id="registerPasswordError"></span>
+
+            <!-- Password requirements banner positioned relative to password field -->
+            <div class="password-requirements" id="passwordBanner">
+              <strong>Password must contain:</strong>
+              <ul>
+                <li>At least 1 uppercase letter</li>
+                <li>At least 1 lowercase letter</li>
+                <li>At least 1 number</li>
+                <li>Minimum 8 characters</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="form-group password-group">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password *</label
+            >
+            <div class="password-input-wrapper">
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                class="form-input"
+                placeholder="Confirm Password"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                id="toggleConfirmPassword"
+              >
+                SHOW
+              </button>
+            </div>
+            <span class="error-message" id="confirmPasswordError"></span>
+          </div>
+
+          <button type="submit" class="auth-btn">CREATE ACCOUNT</button>
+          <div class="auth-links">
+            <p class="login-prompt">
+              Already have an account?
+              <a href="/login" class="login-link">Sign In</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .auth-page {
+    padding: 6rem 2rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    color: #333;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .auth-wrapper {
+    background: #fff;
+    padding: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  .auth-section {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 4rem;
+  }
+
+  .auth-form {
+    max-width: 55rem;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 2.5rem;
+  }
+
+  .password-group {
+    grid-column: 1 / -1;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #2c2c2c;
+    margin-bottom: 0.8rem;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 1.4rem 1.6rem;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    background: #fff;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #000;
+  }
+
+  .form-input::placeholder {
+    color: #999;
+  }
+
+  .form-input.error {
+    border-color: #e74c3c;
+  }
+
+  .password-input-wrapper {
+    position: relative;
+  }
+
+  .password-toggle {
+    position: absolute;
+    right: 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .password-toggle:hover {
+    color: #000;
+  }
+
+  .error-message {
+    display: block;
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    min-height: 1.5rem;
+  }
+
+  /* Password requirements banner */
+  .password-requirements {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.15);
+    font-size: 1.2rem;
+    width: 280px;
+    z-index: 10;
+    display: none;
+  }
+
+  .password-requirements strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c2c2c;
+  }
+
+  .password-requirements ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style-type: disc;
+  }
+
+  .password-requirements li {
+    margin-bottom: 0.2rem;
+    color: #666;
+  }
+
+  .auth-btn {
+    width: 100%;
+    background: #000;
+    color: white;
+    border: none;
+    padding: 1.6rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2rem;
+  }
+
+  .auth-btn:hover {
+    background: #333;
+  }
+
+  .auth-links {
+    text-align: center;
+  }
+
+  .login-prompt {
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0;
+  }
+
+  .login-link {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .login-link:hover {
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .auth-page {
+      padding: 4rem 1rem;
+    }
+
+    .auth-wrapper {
+      padding: 3rem 2rem;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .password-requirements {
+      right: auto;
+      left: 0;
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .auth-wrapper {
+      padding: 2rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Helper validators
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+    function validatePassword(password) {
+      return (
+        /[A-Z]/.test(password) &&
+        /[a-z]/.test(password) &&
+        /\d/.test(password) &&
+        password.length >= 8
+      );
+    }
+    function validateName(name) {
+      return name.trim().length >= 2;
+    }
+    function validatePhone(phone) {
+      // only digits, up to 11
+      return /^\d{0,11}$/.test(phone);
+    }
+
+    // ELEMENTS
+    const firstNameEl = document.getElementById('firstName');
+    const lastNameEl = document.getElementById('lastName');
+    const mobileEl = document.getElementById('mobile');
+    const registerEmailEl = document.getElementById('registerEmail');
+    const registerPasswordEl = document.getElementById('registerPassword');
+    const confirmPasswordEl = document.getElementById('confirmPassword');
+    const registerForm = document.getElementById('registerForm');
+    const passwordToggleBtn = document.getElementById('toggleRegisterPassword');
+    const confirmPasswordToggleBtn = document.getElementById(
+      'toggleConfirmPassword'
+    );
+    const passwordBanner = document.getElementById('passwordBanner');
+
+    // UTILS: show/clear errors
+    function showError(fieldEl, msg) {
+      const err = document.getElementById(fieldEl.id + 'Error');
+      err.textContent = msg;
+      fieldEl.classList.add('error');
+    }
+    function clearError(fieldEl) {
+      const err = document.getElementById(fieldEl.id + 'Error');
+      err.textContent = '';
+      fieldEl.classList.remove('error');
+    }
+
+    // 1) Prevent digits in first/last name as you type
+    [firstNameEl, lastNameEl].forEach(el => {
+      el.addEventListener('input', () => {
+        // strip out any digits
+        el.value = el.value.replace(/\d+/g, '');
+        if (el.classList.contains('error')) clearError(el);
+      });
+    });
+
+    // 2) Restrict mobile: only digits, max 11 characters
+    mobileEl.setAttribute('maxlength', 11);
+    mobileEl.addEventListener('input', () => {
+      // remove non‑digits
+      mobileEl.value = mobileEl.value.replace(/\D+/g, '');
+      if (mobileEl.classList.contains('error')) clearError(mobileEl);
+    });
+
+    // 3) Force email lowercase on the fly
+    registerEmailEl.addEventListener('input', () => {
+      const start = registerEmailEl.selectionStart;
+      registerEmailEl.value = registerEmailEl.value.toLowerCase();
+      registerEmailEl.setSelectionRange(start, start);
+      if (registerEmailEl.classList.contains('error'))
+        clearError(registerEmailEl);
+    });
+
+    // 4) Password show/hide functionality
+    passwordToggleBtn.addEventListener('click', function () {
+      const type =
+        registerPasswordEl.getAttribute('type') === 'password'
+          ? 'text'
+          : 'password';
+      registerPasswordEl.setAttribute('type', type);
+      passwordToggleBtn.textContent = type === 'password' ? 'SHOW' : 'HIDE';
+    });
+
+    confirmPasswordToggleBtn.addEventListener('click', function () {
+      // figure out the new type
+      const type =
+        confirmPasswordEl.getAttribute('type') === 'password'
+          ? 'text'
+          : 'password';
+      // set it
+      confirmPasswordEl.setAttribute('type', type);
+      // swap the button label
+      confirmPasswordToggleBtn.textContent =
+        type === 'password' ? 'SHOW' : 'HIDE';
+    });
+
+    // 5) Password requirements banner - positioned relative to password field
+    registerPasswordEl.addEventListener('focus', () => {
+      passwordBanner.style.display = 'block';
+    });
+
+    registerPasswordEl.addEventListener('blur', () => {
+      passwordBanner.style.display = 'none';
+    });
+
+    registerPasswordEl.addEventListener('input', () => {
+      if (registerPasswordEl.classList.contains('error'))
+        clearError(registerPasswordEl);
+    });
+
+    // Clear error on confirm password input
+    confirmPasswordEl.addEventListener('input', () => {
+      if (confirmPasswordEl.classList.contains('error'))
+        clearError(confirmPasswordEl);
+    });
+
+    // 6) On submit: full validation
+    registerForm.addEventListener('submit', function (e) {
+      let valid = true;
+      // clear all
+      [
+        firstNameEl,
+        lastNameEl,
+        mobileEl,
+        registerEmailEl,
+        registerPasswordEl,
+        confirmPasswordEl,
+      ].forEach(el => clearError(el));
+
+      // first name
+      if (!firstNameEl.value.trim()) {
+        showError(firstNameEl, 'First name is required');
+        valid = false;
+      } else if (!validateName(firstNameEl.value)) {
+        showError(firstNameEl, 'At least 2 characters');
+        valid = false;
+      }
+      // last name
+      if (!lastNameEl.value.trim()) {
+        showError(lastNameEl, 'Last name is required');
+        valid = false;
+      } else if (!validateName(lastNameEl.value)) {
+        showError(lastNameEl, 'At least 2 characters');
+        valid = false;
+      }
+      // mobile (optional)
+      if (mobileEl.value && !validatePhone(mobileEl.value)) {
+        showError(mobileEl, 'Only digits, up to 11');
+        valid = false;
+      }
+      // email
+      if (!registerEmailEl.value) {
+        showError(registerEmailEl, 'Email is required');
+        valid = false;
+      } else if (!validateEmail(registerEmailEl.value)) {
+        showError(registerEmailEl, 'Invalid email');
+        valid = false;
+      }
+      // password
+      if (!registerPasswordEl.value) {
+        showError(registerPasswordEl, 'Password is required');
+        valid = false;
+      } else if (!validatePassword(registerPasswordEl.value)) {
+        showError(registerPasswordEl, 'Does not meet requirements');
+        valid = false;
+      }
+
+      // confirm password
+      if (!confirmPasswordEl.value) {
+        showError(confirmPasswordEl, 'Confirm password is required');
+        valid = false;
+      } else if (registerPasswordEl.value !== confirmPasswordEl.value) {
+        showError(confirmPasswordEl, 'Passwords do not match');
+        valid = false;
+      }
+
+      if (!valid) e.preventDefault();
+    });
+  });
+</script>

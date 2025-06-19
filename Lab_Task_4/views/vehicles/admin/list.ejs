@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Vehicles</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <nav class="navbar">
+      <div class="logo"><img src="/images/logo.png" alt="Logo"></div>
+      <ul>
+        <li><a href="/admin/vehicles">Vehicles</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <h1>Vehicles List</h1>
+    <% if (success && success.length > 0) { %>
+      <% success.forEach(msg => { %>
+        <div class="alert success"><%= msg %></div>
+      <% }) %>
+    <% } %>
+    <% if (danger && danger.length > 0) { %>
+      <% danger.forEach(msg => { %>
+        <div class="alert error"><%= msg %></div>
+      <% }) %>
+    <% } %>
+    <a href="/admin/vehicles/create" class="button">Add New Vehicle</a>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Price</th>
+          <th>Type</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% vehicles.forEach(vehicle => { %>
+          <tr>
+            <td><%= vehicle.name %></td>
+            <td><%= vehicle.brand %></td>
+            <td>$<%= vehicle.price.toFixed(2) %></td>
+            <td><%= vehicle.type %></td>
+            <td><img src="<%= vehicle.image %>" alt="<%= vehicle.name %>" style="max-width: 100px;"></td>
+            <td>
+              <a href="/admin/vehicles/edit/<%= vehicle._id %>" class="button">Edit</a>
+              <a href="/admin/vehicles/delete/<%= vehicle._id %>" class="button" style="background-color: #721c24;" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
