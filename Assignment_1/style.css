@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+
+
+body {
+    font-family: Arial;
+    margin: 15px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #032685;
+}
+
+article.body{ 
+
+    text-align: center;
+    color: #f4f4f4;
+ padding-top: 10px;
+ padding-bottom: 10px;
+    background-color: #032685;
+    border-radius: 10px;
+    padding: 10;
+}
+
+.prof{
+
+padding-top: 5px;
+
+}
+
+.personal-info{
+    margin-top: 30px;
+    margin-bottom: 30px;
+box-shadow: 1px 1px 15px 5px rgba(128, 128, 128, 0.1) ;
+border-radius: 10px;
+padding: 10px;
+
+}
+
+.education{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 15px 5px rgba(128, 128, 128, 0.1) ;
+border-radius: 10px;
+padding: 10px;
+}
+
+.skills{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 15px 5px rgba(128, 128, 128, 0.1) ;
+border-radius: 10px;
+padding: 10px;
+}
+
+.projects{
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 15px 5px rgba(128, 128, 128, 0.1) ;
+border-radius: 10px;
+padding: 10px;
+}
+
+.experience{
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 15px 5px rgba(128, 128, 128, 0.1) ;
+border-radius: 10px;
+padding: 10px;
+    
+}
+.contact{
+    box-shadow: 1px 1px 15px 5px rgba(128, 128, 128, 0.1) ;
+border-radius: 10px;
+padding: 10px;
+}
+
+
+body.h3{
+    border-bottom: #032685;
+
+}
+
+
+
+

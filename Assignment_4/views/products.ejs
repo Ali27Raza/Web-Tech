@@ -1,0 +1,15 @@
+<div class="products">
+  <% products.forEach(function(product) { %>
+  <div class="product-item" id="product-<%= product._id %>">
+    <a href="#">
+      <img role="img" class="g-img" src="<%= product.image %>" />
+      <!-- <img src="<%= product.image %>" alt="<%= product.title %>" /> -->
+    </a>
+    <h2><%= product.title %></h2>
+    <p class="price">$<%= product.price.toFixed(2) %></p>
+    <form action="/cart/add/<%= product._id %>" method="POST">
+      <button type="submit" class="shop-now button">Add to Cart</button>
+    </form>
+  </div>
+  <% }); %>
+</div>

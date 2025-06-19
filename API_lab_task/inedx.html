@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function doBindings(){
+            $("#btn").on("click",fetchBtnClicked)
+
+        }
+        window.onload = doBindings
+
+        function fetchBtnClicked(){
+            console.log("button clicked")
+            $.ajax(
+                {
+                    url:"https://jsonplaceholder.typicode.com/posts",
+                    success:displayPosts
+                }
+        )
+        }
+        
+
+        function displayPosts(data){
+            for (let index = 0; index < data.length; index++) {
+                const post = data[index];
+                $("#posts").append(`
+                <div>
+                <h3>Id: ${post.id}</h1>
+                <h4>Title: ${post.title}</h1>
+                <p>Body: ${post.body}</p>
+                </div>
+                `)
+            }
+        }
+    </script>
+
+    <h1>Posts</h21><br>
+        <button id="btn">Get Posts</button>
+        <div id="posts"></div>
+</body>
+</html>

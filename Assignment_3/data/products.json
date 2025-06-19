@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Men's Jackets",
+    "image": "/assets/img/girl.png",
+    "price": 129.99
+  },
+  {
+    "id": 2,
+    "title": "Women's Jackets",
+    "image": "/assets/img/cap.png",
+    "price": 119.49
+  },
+  {
+    "id": 3,
+    "title": "Accessories",
+    "image": "/assets/img/Accessories.png",
+    "price": 34.95
+  },
+  {
+    "id": 4,
+    "title": "Footwear",
+    "image": "/assets/img/shoes.png",
+    "price": 89.0
+  }
+]
